@@ -1,0 +1,13 @@
+CREATE SCHEMA IF NOT EXISTS `flask_lab7`;
+
+CREATE TABLE `flask_lab7`.`users` (
+    `userid` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(80) NOT NULL,
+    `firstname` VARCHAR(80) NOT NULL,
+    `lastname` VARCHAR(80) NOT NULL,
+    `email` VARCHAR(120) NOT NULL,
+    `password` VARCHAR(120) NOT NULL,
+    PRIMARY KEY (`userid`),
+    UNIQUE KEY `username_UNIQUE` (`username`),
+    UNIQUE KEY `email_UNIQUE` (`email`)
+);
